@@ -53,6 +53,7 @@
 					"activities": [
 						{
 							"name": "IfFileMatches",
+							"description": "ADF File Routing Project",
 							"type": "IfCondition",
 							"dependsOn": [],
 							"userProperties": [],
