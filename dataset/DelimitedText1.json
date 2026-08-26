@@ -1,0 +1,90 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedserviceDL",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_file_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().p_file_name",
+					"type": "Expression"
+				},
+				"folderPath": "csvfiles",
+				"fileSystem": "source"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Product_ID",
+				"type": "String"
+			},
+			{
+				"name": "Sale_Date",
+				"type": "String"
+			},
+			{
+				"name": "Sales_Rep",
+				"type": "String"
+			},
+			{
+				"name": "Region",
+				"type": "String"
+			},
+			{
+				"name": "Sales_Amount",
+				"type": "String"
+			},
+			{
+				"name": "Quantity_Sold",
+				"type": "String"
+			},
+			{
+				"name": "Product_Category",
+				"type": "String"
+			},
+			{
+				"name": "Unit_Cost",
+				"type": "String"
+			},
+			{
+				"name": "Unit_Price",
+				"type": "String"
+			},
+			{
+				"name": "Customer_Type",
+				"type": "String"
+			},
+			{
+				"name": "Discount",
+				"type": "String"
+			},
+			{
+				"name": "Payment_Method",
+				"type": "String"
+			},
+			{
+				"name": "Sales_Channel",
+				"type": "String"
+			},
+			{
+				"name": "Region_and_Sales_Rep",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
